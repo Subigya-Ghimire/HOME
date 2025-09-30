@@ -7,6 +7,10 @@ import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
+export async function generateStaticParams() {
+  return []
+}
+
 export default async function BillDetailPage({
   params,
 }: {

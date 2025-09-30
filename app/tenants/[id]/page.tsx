@@ -6,12 +6,16 @@ import { Navigation } from "@/components/navigation"
 import { notFound } from "next/navigation"
 import { Phone, Home, Calendar, FileText, ArrowLeft } from "lucide-react"
 
+export async function generateStaticParams() {
+  return []
+}
+
 export default async function TenantDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }) {
-  const { id } = await params
+  const { id } = params
 
   if (id === "create" || id === "new") {
     notFound()
